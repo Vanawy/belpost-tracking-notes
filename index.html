@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BelpostTrack by Vanawy</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Отслеживание посылок в Беларуси. Отправления проходящие через Белпочту">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Отследить отправление</h1>
+        <form>
+            <label for="tracknumber">Трек-код</label>
+            <input type="text" id="tracknumber" placeholder="AB999999999CD"><br>
+            <label for="comment">Комментарий:</label>
+            <input type="text" id="comment" placeholder=""><br>
+            <input type="button" id="add-track" value="Добавить трек-код"><br>
+            <span id="error"></span>
+        </form>
+        <p>Номера для отслеживания:</p>
+        <div id="list">
+            <p><i>Здесь пусто</i></p>
+        </div>
+    </body>
+</html>
