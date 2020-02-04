@@ -61,17 +61,18 @@ function removeNumber(id){
 }
 function makeTable(){
     const numbers = getNumbers();
-    let table = "<table><tr><th>Номер</th><th>Комментарий</th><th>Действия</th><tr>"
+    let table = "<thead><tr><th>Номер</th><th>Комментарий</th><th>Действия</th><tr></thead><tbody>";
     for(let number of numbers){
         table += getTableRecord(number);
     }
-    $("#list").html(table);
+    table += "</tbody>";
+    $("#table").html(table);
 }
 function getTableRecord(number){
-    let actions = `<a href="${getTrackUrl(number)}" target="_blank">Отследить</a>`;
+    let actions = `<a href="${getTrackUrl(number.id)}" target="_blank">Отследить</a> `;
     actions += `<a href="#" onclick="removeNumber('${number.id}')">Удалить</a>`;
     return `<tr><td>${number.id}</td><td>${number.c}</td><td>${actions}</td></tr>`;
 }
-function getTrackUrl(number){
-    return BELPOST_API + number;
+function getTrackUrl(id){
+    return BELPOST_API + id;
 }

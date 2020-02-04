@@ -6,21 +6,35 @@
         <meta name="description" content="Отслеживание посылок в Беларуси. Отправления проходящие через Белпочту">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="script.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <h1>Отследить отправление</h1>
-        <form>
-            <label for="tracknumber">Трек-код</label>
-            <input type="text" id="tracknumber" placeholder="AB999999999CD"><br>
-            <label for="comment">Комментарий:</label>
-            <input type="text" id="comment" placeholder=""><br>
-            <input type="button" id="add-track" value="Добавить трек-код"><br>
-            <span id="error"></span>
-        </form>
-        <p>Номера для отслеживания:</p>
-        <div id="list">
-            <p><i>Здесь пусто</i></p>
+        <div class="content">
+            <center><h1>Отследить отправление</h1></center>
+            <form class="pure-form pure-form-aligned">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label for="tracknumber">Трек-код:</label>
+                        <input type="text" id="tracknumber" placeholder="AB999999999CD">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="comment">Комментарий:</label>
+                        <input type="text" id="comment" placeholder="">
+                    </div>
+                    <div class="pure-controls">
+                        <span id="error" class="pure-form-message"></span>
+                        <input type="button" id="add-track" value="Добавить трек-код" class="pure-button pure-button-primary"><br>
+                    </div>
+                </fieldset>
+            </form>
+            <p>Номера для отслеживания:</p>
+            <div>
+                <table class="pure-table pure-table-striped" id="table"></table>
+            </div>
+            <br>
+            <center>© <a href="https://vanawy.net">vanawy</a></center>
         </div>
     </body>
 </html>
