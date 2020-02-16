@@ -15,6 +15,7 @@ $(document).ready(function(){
             }
             addNumber(number, comment);
             $("#tracknumber").val("");
+            $("#comment").val("");
             makeTable();
         }
         catch(e){
