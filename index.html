@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BelpostTrack by Vanawy</title>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <meta charset="utf-8">
-        <meta name="description" content="Отслеживание посылок в Беларуси. Отправления проходящие через Белпочту">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <div class="container-md">
-            <center><h1>Отследить отправление</h1></center>
-            <form class="form form-aligned">
-                <fieldset>
-                    <div class="form-group">
-                        <label for="tracknumber">Трек-код:</label>
-                        <input type="text" id="tracknumber" class="form-control form-control-lg" placeholder="AB999999999CD">
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Комментарий:</label>
-                        <input type="text" id="comment" class="form-control form-control-lg" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <span id="error" class="form-message"></span>
-                        <input type="button" id="add-track" class="form-control form-control-lg btn-primary" value="Добавить трек-код" class="button button-primary"><br>
-                    </div>
-                </fieldset>
-            </form>
-            <p>Номера для отслеживания:</p>
-            <div>
-                <table class="table table-striped" id="table"></table>
-            </div>
-            <br>
-            <center>© <a href="https://vanawy.net" target="_blank">vanawy</a></center>
+
+<head>
+    <title>BelpostTrack by Vanawy</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="Отслеживание посылок в Беларуси. Отправления проходящие через Белпочту">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-md">
+        <center>
+            <h1>Отследить отправление</h1>
+        </center>
+        <form class="form form-aligned">
+            <fieldset>
+                <div class="form-group">
+                    <label for="tracknumber">Трек-код:</label>
+                    <input type="text" id="tracknumber" class="form-control form-control-lg" placeholder="AB999999999CD">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий:</label>
+                    <input type="text" id="comment" class="form-control form-control-lg" placeholder="">
+                </div>
+                <div class="form-group">
+                    <span id="error" class="form-message"></span>
+                    <input type="button" id="add-track" class="form-control form-control-lg btn-primary" value="Добавить трек-код" class="button button-primary"><br>
+                </div>
+            </fieldset>
+        </form>
+        <p>Номера для отслеживания:</p>
+        <div>
+            <table class="table table-striped" id="table"></table>
         </div>
-    </body>
+        <br>
+        <center>© <a href="https://vanawy.net" target="_blank">vanawy</a></center>
+    </div>
+</body>
+
 </html>
